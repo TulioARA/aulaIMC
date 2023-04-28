@@ -6,7 +6,7 @@ function calculaIMC() {
     altura = parseFloat( document.getElementById("edtAltura").value ) ;
     
     resp = peso / (altura * altura) ;
-    if(peso==null||altura==null){
+    if(document.getElementById("edtPeso").value==null||document.getElementById("edtAltura").value==null){
         classificacao = "Insira todos os dados";
     }
     else if(peso<0){
