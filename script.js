@@ -6,8 +6,16 @@ function calculaIMC() {
     altura = parseFloat( document.getElementById("edtAltura").value ) ;
     
     resp = peso / (altura * altura) ;
-
-    if (resp <= 18.5) {
+    if(peso==null||altura==null){
+        classificacao = "Insira todos os dados";
+    }
+    else if(peso<0){
+        classificacao = "O peso não pode ser negativo";
+    }
+    else if(altura<0){
+        classificacao = "A altura não pode ser negativa";
+    }
+    else if (resp <= 18.5) {
         classificacao = " abaixo do peso";
     } else if (resp <= 24.9) {
         classificacao = " peso ideal"; 
